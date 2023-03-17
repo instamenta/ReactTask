@@ -34,20 +34,29 @@ ReactTask/
 │   └── icon-search.svg
 ├── src/
 │   ├── api.json
+│   ├── __mocks__/
+│   │   ├── fileMock.js
+│   │   └── styleMock.js
+│   ├── __tests__/
+│   │   └── App.test.jsx
 │   ├── components/
-│   │   ├── Catalog/
-│   │   │   ├── Catalog.css
-│   │   │   └── Catalog.jsx
-│   │   └── Header/
-│   │       ├── Header.css
-│   │       └── Header.jsx
+│   │   └── Catalog/
+│   │       ├── Catalog.css
+│   │       ├── Catalog.jsx
+│   │       └── Catalog.test.jsx
 │   ├── App.css
 │   ├── App.jsx
-│   └── index.js
+│   ├── main.jsx
+│   ├── setupTests.js
+│   └── index.css
+├── babel.config.js
+├── index.html
+├── jest.config.cjs
+├── jest.setup.js
+├── vite.config.js
 ├── .gitignore
 ├── package-lock.json
-├── package.json
-└── README.md
+└── package.json
 ```
 ## App Preview: 
 ![Capture](https://user-images.githubusercontent.com/98179343/225954614-25efa9b2-58cd-4b47-921e-d75e5f4cc5f9.PNG)
