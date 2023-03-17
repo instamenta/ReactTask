@@ -25,21 +25,27 @@ This is a simple support desk app built using React and Vite. The app allows use
 ## App Architecture
 ```
 ReactTask/
+├── node_modules/
 ├── public/
+│   ├── favicon.ico
+│   ├── index.html
 │   ├── icon-available.svg
 │   ├── icon-busy.svg
 │   └── icon-search.svg
 ├── src/
 │   ├── api.json
+│   ├── components/
+│   │   ├── Catalog/
+│   │   │   ├── Catalog.css
+│   │   │   └── Catalog.jsx
+│   │   └── Header/
+│   │       ├── Header.css
+│   │       └── Header.jsx
 │   ├── App.css
 │   ├── App.jsx
-│   ├── components/
-│   │   └── Catalog/
-│   │       ├── Catalog.css
-│   │       └── Catalog.jsx
-│   ├── index.css
-│   └── index.jsx
+│   └── index.js
 ├── .gitignore
+├── package-lock.json
 ├── package.json
 └── README.md
 ```
