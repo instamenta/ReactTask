@@ -1,10 +1,10 @@
 # ReactTask
 This is a simple support desk app built using React and Vite. The app allows users to search for support staff and view their availability status.
 ```
-┌─────────┐        ┌─────────┐
-    │  index  │        │   App   │
-    │ .html  ├──┐  ┌──►├─────────┤
-    └─────────┘  │  │  │Catalog  │
+     ┌─────────┐        ┌─────────┐
+     │  index  │        │   App   │
+     │  .html  ├──┐  ┌─►├─────────┤
+     └─────────┘  │  │  │Catalog  │
                   │  │  ├─────────┤
                   │  │  │  APIs   │
                   │  │  └─────────┘
