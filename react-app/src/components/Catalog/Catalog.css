@@ -1,22 +1,20 @@
-/* Card Styles */
+/* Grid Container Configuration */
 
 .card-container {
     display: grid;
     padding: 10vh 4vw;
-    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
     grid-row-gap: 5rem;
     grid-column-gap: 3rem;
 }
 
-.card {
-    padding: 32px;
-    padding-top: 48px;
+/* Card Styles */
 
-    padding-bottom: 0px;
+.card {
+    padding: 48px 32px 0px 32px;
     background-color: #f7f7f7;
     border-radius: 5px;
     color: rgb(54, 54, 54);
-
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
@@ -24,6 +22,7 @@
     transition: all 0.6s ease-in-out;
 }
 
+/* Image and activeStatus container */
 
 .card-image-container {
     width: 100%;
@@ -33,6 +32,10 @@
     justify-content: flex-end;
     align-items: end;
     transition: all 0.6s ease-in-out;
+    /* this is used to display default image if there is no profile picture */
+    background-image: url('https://techcrunch.com/wp-content/uploads/2014/10/facebook-anonymous-blur.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .card-image {
@@ -46,7 +49,7 @@
 
 }
 
-
+/* Description Data */
 
 .card-fullname {
     font-weight: bold;
@@ -61,22 +64,20 @@
     display: block;
 
 }
+
 .card-description-container {
     width: 100%;
     min-height: 80px;
     transition: all 0.6s ease-in-out;
 }
 
-/* Hidden Data Styles */
+/* Hidden Data */
 
 .hidden {
     font-weight: 100;
     font-size: 0px;
     transition: all 0.6s ease-in-out;
-
 }
-
-
 
 .card:hover .hidden {
     font-size: 16px;
@@ -86,7 +87,6 @@
 
 .card:hover .card-image-container {
     height: 220px;
-
 }
 
 .card:hover .card-description-container {
@@ -94,20 +94,19 @@
 }
 
 .card-phone {
-        display: block;
-
+    display: block;
 }
 
 .card-email {
-
-        display: block;
-
+    display: block;
 }
 
 .card span {
     width: 100%;
     text-align: left;
 }
+
+/* Displaying Hidden on Hover */
 
 .card-status-image {
     position: relative;
@@ -117,6 +116,5 @@
 
 .card:hover .card-status-image {
     transform: rotate(+360deg) scale(1.1);
-    margin: 36px 20px;    
+    margin: 36px 20px;
 }
-
