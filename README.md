@@ -9,7 +9,7 @@ To use the app, you need to have Node.js and npm installed on your system. Once 
 
 Clone the repository
 
-````
+```
 git clone https://github.com/instamenta/ReactTask.git
 ```
 Install the dependencies
