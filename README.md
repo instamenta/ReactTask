@@ -51,7 +51,7 @@ ReactTask/
 │   └── index.css
 ├── babel.config.js
 ├── index.html
-├── jest.config.js
+├── jest.config.cjs
 ├── jest.setup.js
 ├── vite.config.js
 ├── .gitignore
