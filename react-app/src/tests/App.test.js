@@ -3,6 +3,10 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import App from './App';
 import { Catalog } from './components/Catalog/Catalog';
+import { configure } from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+configure({ adapter: new Adapter() });
 
 describe('App', () => {
   it('renders the search box', () => {
