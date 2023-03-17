@@ -32,10 +32,7 @@
     justify-content: flex-end;
     align-items: end;
     transition: all 0.6s ease-in-out;
-    /* this is used to display default image if there is no profile picture */
-    background-image: url('https://techcrunch.com/wp-content/uploads/2014/10/facebook-anonymous-blur.jpg');
-    background-position: center;
-    background-size: cover;
+    
 }
 
 .card-image {
