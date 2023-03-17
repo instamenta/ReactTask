@@ -1,31 +1,43 @@
-# Support Desk task
+# ReactTask
+This is a simple support desk app built using React and Vite. The app allows users to search for support staff and view their availability status.
 
-## Task
+## App Preview: 
+![Capture](https://user-images.githubusercontent.com/98179343/225954614-25efa9b2-58cd-4b47-921e-d75e5f4cc5f9.PNG)
 
-Create a simple Support Desk app that should look similar to the following mockup. Use the [assets/api.json](assets/api.json) file to simulate Web API calls.
+## Usage
+To use the app, you need to have Node.js and npm installed on your system. Once you have those installed, follow the steps below:
 
-![Design](assets/design.png)
+Clone the repository
 
-## Requirements
+````
+git clone https://github.com/instamenta/ReactTask.git
+```
+Install the dependencies
 
-- Must be a Single Page App (SPA). Use React, Angular, Vue or a SPA framework of your choice.
-- Must be responsive - working on mobile, tablet and desktop.
-- Make sure more details come up when you hover person (see the second item).
-- Change icon depending on the person's status. Use [assets/icon-available.svg](assets/icon-available.svg) if the person is available, [assets/icon-busy.svg](assets/icon-busy.svg) otherwise. Use [assets/icon-search.svg](assets/icon-search.svg) for the search bar.
-- Implement basic search functionality.
+```
+cd react-app
+```
+```
+npm install
+```
+Start the development server
+### Basic Explanation
+* (read the comments to clarify)
+#### App
+The App component is responsible for rendering the main layout of the app.
+It consists of a navigation bar and a Catalog component that displays the support staff list.
 
-Feel free to use a UI library of your choice - Material Design, Bootstrap, Tailwind, etc.
+#### Catalog
+The Catalog component is responsible for displaying the support staff list.
+It receives a props object that contains the search string entered by the user.
+It then filters the userDataArray based on the search string and displays the filtered results.
 
-## Criteria
+## Technologies Used
+The app was built using the following technologies:
 
-The following are taken into consideration
+* React - A JavaScript library for building user interfaces
+* Vite - A build tool that provides fast development server and optimized build
+* CSS - A style sheet language used for describing the presentation of a document
+### Acknowledgements
+This app was built as part of a technical task for Instamenta.
 
-- Clean and well-organized code
-- Architecture
-- Code comments (quality, not quantity)
-- Tests
-- Linters, docs, etc. are a bonus
-
-We are looking for organized scalable frontend code, with attention to details and corner case handling. Show us your eye for detail and consideration for colleagues that will maintain and modify the code.
-
-Please let us know if you have any questions.
