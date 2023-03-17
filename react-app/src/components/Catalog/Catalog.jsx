@@ -1,5 +1,5 @@
-import userDataArray from '../../api.json'
-import './Catalog.css'
+import userDataArray from '../../api.json';
+import './Catalog.css';
 
 export const Catalog = ({ props }) => {
     // Maps all the userData and Filters it if needed
