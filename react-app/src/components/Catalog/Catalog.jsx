@@ -1,13 +1,16 @@
-
-import dataJSON from './../../api.json'
+import dataJSON from '../../api.json'
 import './Catalog.css'
 
-export const Catalog = () => {
+export const Catalog = ({ props }) => {
+    const catalogList = dataJSON?.map((userData) => {
 
-    const catalogList = dataJSON.map((userData) => {
-
-        const { firstName, lastName, available, phone, email, image, location } = userData
+        const { firstName, lastName, available, phone, email, image, location } = userData;
         const fullname = firstName + ' ' + lastName
+
+        const searchCriteria = fullname + email
+        if (props.length > 0 && !searchCriteria.toLowerCase().includes(props.toLowerCase())
+        ) return null
+
         return (
             <div className='card'>
                 <div className='card-image-container'>
@@ -25,6 +28,7 @@ export const Catalog = () => {
                 </div>
             </div>
         )
+
     })
     return (
         <div className='card-container'>
