@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useState } from "react"
 import { Catalog } from './components/Catalog/Catalog'
 import './App.css'

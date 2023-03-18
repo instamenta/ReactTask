@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import { Catalog } from './Catalog';
-
+import '@testing-library/jest-dom';
 describe('Catalog component', () => {
   const userDataArray = [
     {
@@ -25,20 +25,20 @@ describe('Catalog component', () => {
   ];
 
   it('renders without errors', () => {
-    const wrapper = shallow(<Catalog />);
-    const catalogComponent = wrapper.find('.catalog');
-    expect(catalogComponent).toHaveLength(1);
+    const { container } = render(<Catalog />);
+    const catalogComponent = container.querySelector('.catalog');
+    expect(catalogComponent).toBeInTheDocument();
   });
 
   it('displays all cards if no search query is provided', () => {
-    const wrapper = shallow(<Catalog />);
-    const cardComponents = wrapper.find('.card');
+    const { container } = render(<Catalog />);
+    const cardComponents = container.querySelectorAll('.card');
     expect(cardComponents).toHaveLength(4);
   });
 
   it('filters the cards based on the search query', () => {
-    const wrapper = shallow(<Catalog query="Rod" userDataArray={userDataArray} />);
-    const cardComponents = wrapper.find('.card');
-    expect(cardComponents).toHaveLength(1);
+    const { container } = render(<Catalog query="Doe" userDataArray={userDataArray} />);
+    const cardComponents = container.querySelectorAll('.card');
+    expect(cardComponents).toHaveLength(2);
   });
 });

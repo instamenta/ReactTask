@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import App from './App';
-
+import { render, screen } from '@testing-library/react';
+import App from '../App';
+import '@testing-library/jest-dom';
 describe('App component', () => {
   it('renders without errors', () => {
-    const wrapper = shallow(<App />);
-    const appComponent = wrapper.find('.app');
-    expect(appComponent).toHaveLength(1);
+    render(<App />);
+    const appComponent = screen.getByTestId('app');
+    expect(appComponent).toBeInTheDocument();
   });
 });

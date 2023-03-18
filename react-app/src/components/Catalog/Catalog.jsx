@@ -1,7 +1,10 @@
+import React from 'react';
 import userDataArray from '../../api.json';
 import './Catalog.css';
 
-export const Catalog = ({ props }) => {
+
+export const Catalog = ({  props }) => {
+    console.log(props)
     // Maps all the userData and Filters it if needed
     const catalogList = userDataArray?.map((userData) => {
 
@@ -10,7 +13,7 @@ export const Catalog = ({ props }) => {
         // Add data to searchCriteria to filter based on more data
         const searchCriteria = fullname + email
         // If there is search string value we check if it included in any of our searchCriteria 
-        if (props.length > 0 && !searchCriteria.toLowerCase().includes(props.toLowerCase())
+        if (props && props?.length > 0 && !searchCriteria.toLowerCase().includes(props.toLowerCase())
         ) return null
 
         return (
