@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@testing-library/user-event": "^14.4.3",
-    "axe-core": "^4.6.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -26,8 +25,6 @@
     "@types/react": "^18.0.3",
     "@types/react-dom": "^18.0.3",
     "@vitejs/plugin-react": "^3.1.0",
-    "axe": "^12.1.0",
-    "cypress": "^12.8.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.5",
     "react-test-renderer": "^18.0.3",

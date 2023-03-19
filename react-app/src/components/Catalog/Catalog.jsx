@@ -3,50 +3,39 @@ import userDataArray from '../../api.json';
 import './Catalog.css';
 
 export const Catalog = ({ props }) => {
-
     let searchString = props;
-    let key = 1;    // used as react key prop
-
-
+    let key = 1;
     // Maps all the userData and Filters it if needed
     const catalogList = userDataArray?.map((userData) => {
+        key++;
         const { firstName, lastName, available, phone, email, image, location } = userData;
         const fullname = firstName + ' ' + lastName;
         // Add data to searchCriteria to filter based on more data
         const searchCriteria = fullname + email;
-
+        // If there is search string value we check if it included in any of our searchCriteria
+        // and filter out items that don't match the search string
         if (searchString
             && searchString?.length > 0
             && !searchCriteria.toLowerCase().includes(searchString.toLowerCase())) {
-            // Checks if searchString is a invalid and if it is NOT included 
             return null;
         }
         if (typeof searchString === 'string') {
-            // Validates searchString 
-
-            key++   // unique key prop is updated
             return (
                 <div className="card" key={key} data-testid="catalog-card">
                     <div className="card-image-container">
                         <img className="card-image" src={image} alt="img" data-testid="card-image" />
                         {/* Render based on the available boolean => Busy or Available Icon */}
-                        {available ? (      // AVAILABLE
-                            <img src="/icon-available.svg" alt={"available-icon-" + key}
-                                className="card-status-image" data-testid="available-icon"
-                            />
-                        ) : (               // BUSY
-                            <img src="/icon-busy.svg" alt={"busy-icon-" + key}
-                                className="card-status-image" data-testid="busy-icon"
-                            />
+                        {available ? (
+                            <img src="/icon-available.svg" alt={"available-icon-" + key} className="card-status-image" data-testid="available-icon" />
+                        ) : (
+                            <img src="/icon-busy.svg" alt={"busy-icon-" + key} className="card-status-image" data-testid="busy-icon" />
                         )}
                     </div>
-                    {/* User Data and Status */}
                     <div className="card-description-container" data-testid="card-description-container">
-
+                        {/* Displayed fulltime */}
                         <span className="card-fullname" data-testid="card-fullname">
                             {fullname}
                         </span>
-
                         <span className="card-location" data-testid="card-location">
                             {location}
                         </span>
@@ -61,7 +50,7 @@ export const Catalog = ({ props }) => {
                 </div>
             );
         } else {
-            return null;
+            return null
         }
     });
 
