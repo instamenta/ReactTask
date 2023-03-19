@@ -10,15 +10,22 @@ function App() {
     <div className="App">
       <nav>
         <div className="logo">
-          <a href="#">Support Desk</a>
+          <a href="#" data-testid="logo">Support Desk</a>
         </div>
         <div className="search-box">
           {/* Sets the searchValue */}
           <input onChange={(e) => setSearchValue(e.target.value)}
             className="search"
             type="text"
-            placeholder="Search" />
-          <img src="./../../public/icon-search.svg" alt="search-icon" className="nav-icon" />
+            placeholder="Search"
+            data-testid="search"
+          />
+          <img
+            src="/icon-search.svg"
+            alt="search-icon"
+            className="nav-icon"
+            data-testid="nav-icon"
+          />
         </div>
       </nav>
       {/* Passes the setSearchValue to the Catalog component */}

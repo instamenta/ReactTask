@@ -8,9 +8,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "test:debug": "jest --debug"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.4.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
