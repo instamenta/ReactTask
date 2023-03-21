@@ -18,9 +18,9 @@ This is a simple support desk app built using React and Vite. The app allows use
                   └──┴─►│  JSON   │
                      │  └─────────┘
                      │
-                     │  ┌─────────┐
+                     │   ┌─────────┐
                      └──►│  SVGs   │
-                        └─────────┘
+                         └─────────┘
 ```
 ## App Architecture
 ```
@@ -78,6 +78,14 @@ cd react-app
 npm install
 ```
 Start the development server
+```
+npm run dev
+```
+Run tests
+```
+npm run test
+```
+
 ### Basic Explanation
 * (read the comments to clarify)
 #### App
