@@ -1,4 +1,5 @@
 # ReactTask
+## Please view at 50% zoom 
 This is a simple support desk app built using React and Vite. The app allows users to search for support staff and view their availability status.
 ## ASCII art representation of the architecture of the React app
 ```
